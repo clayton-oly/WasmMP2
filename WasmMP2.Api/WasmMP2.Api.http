@@ -1,0 +1,6 @@
+@WasmMP2.Api_HostAddress = http://localhost:5188
+
+GET {{WasmMP2.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
