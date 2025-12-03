@@ -15,7 +15,7 @@ namespace WasmMP2.Api.Data
             var catBurger = new Category { Name = "Lanches" };
             var catDrink = new Category { Name = "Bebidas" };
             var catDessert = new Category { Name = "Sobremessa" };
-            context.Categories.AddRange(catBurger, catDrink);
+            context.Categories.AddRange(catBurger, catDrink, catDessert);
 
             context.Products.AddRange(
                 new Product
