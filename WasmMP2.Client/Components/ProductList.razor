@@ -1,0 +1,42 @@
+﻿@inject HttpClient http
+
+<h3>Produtos (API + SQLite)</h3>
+@if (errorMessage is not null)
+{
+    <div class="alert alert-danger">
+        Erro ao carregar produtos: @errorMessage
+    </div>
+}
+else if (products is null)
+{
+    <p>
+        Nenhum produto encontrado
+    </p>
+}
+else
+{
+    <div class="d-flex flex-wrap">
+        @foreach (var p in products)
+        {
+            <ProductCard Product="p"></ProductCard>
+        }
+    </div>
+}
+
+@code {
+    private List<ProductDTO>? products;
+    private string? errorMessage;
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            //usando apenas caminho relativo
+            products = await http.GetFromJsonAsync<List<ProductDTO>>("api/products");
+        }
+        catch (Exception ex)
+        {
+
+            errorMessage = ex.Message;
+        }
+    }
+}

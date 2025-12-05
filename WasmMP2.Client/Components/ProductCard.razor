@@ -1,0 +1,27 @@
+﻿<div class="card m-2" style="width:16rem;">
+    <img src="@Product.ImageUrl" class="card-img-top" alt="@Product.Name" style="max-height:200px; object-fit:cover" />
+    <div class="card-body">
+        <h5 class="card-title">@Product.Name</h5>
+        <p class="card-text">
+            Preço:@Product.Price
+        </p>
+        <p class="card-text">
+            Categoria:@Product.Category?.Name
+        </p>
+
+        <button class="btn btm-sm @(Product.IsFavorite ? "btn-warning" : "btn-outline-secondary")" @onclick="ToogleFavorite">
+            @(Product.IsFavorite ? "Favorito" : "Não Favorito")
+        </button>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public ProductDTO Product { get; set; } = default!;
+
+    //toogle
+    private void ToogleFavorite()
+    {
+        Product.IsFavorite = !Product.IsFavorite;
+    }
+}

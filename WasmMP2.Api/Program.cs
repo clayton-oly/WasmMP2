@@ -18,7 +18,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: corsPolicyName, policy =>
     {
         //ajustar as URLs conforme a porta Client
-        policy.WithOrigins("http://localhost:5148", "https://localhost:5148").AllowAnyHeader().AllowAnyMethod();
+        policy.WithOrigins("http://localhost:5148", "https://localhost:7008").AllowAnyHeader().AllowAnyMethod();
     });
 });
 

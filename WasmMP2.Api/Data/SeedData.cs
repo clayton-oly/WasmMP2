@@ -22,7 +22,7 @@ namespace WasmMP2.Api.Data
                 {
                     Name = "xBurger",
                     Price = 25.9m,
-                    ImageUrl = "https://via.placeholder.com/300x200?text=XBurger",
+                    ImageUrl = "https://placehold.co/300x200?text=XBurger",
                     IsFavorite = true,
                     Category = catBurger
                 },
@@ -30,7 +30,7 @@ namespace WasmMP2.Api.Data
                 {
                     Name = "Coca-Cola",
                     Price = 7.0m,
-                    ImageUrl = "https://via.placeholder.com/300x200?text=XBurger",
+                    ImageUrl = "https://placehold.co/300x200?text=XBurger",
                     IsFavorite = true,
                     Category = catDrink
                 },
@@ -38,7 +38,7 @@ namespace WasmMP2.Api.Data
                 {
                     Name = "Pudim",
                     Price = 10.9m,
-                    ImageUrl = "https://via.placeholder.com/300x200?text=batata+frita",
+                    ImageUrl = "https://placehold.co/300x200?text=batata+frita",
                     IsFavorite = true,
                     Category = catDessert
                 }
